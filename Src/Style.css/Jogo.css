@@ -1,0 +1,54 @@
+.escolha-container{
+    display: flex;
+    margin-bottom: 05.rem;
+    width: 100%;
+    border: 0.1rem solid rgba(6, 243, 65, 0.25);
+    background-color: rgb(243, 243, 243);
+}
+.escolha-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem rgba(0, 255, 34, 0.5);
+    transition: transform 150ms;
+    transform: translateY(-0.1rem);
+}
+.escolha-prefixa{
+    padding: 1.5rem 2.5rem;
+    background-color:#56eb7b;
+    color: rgb(176, 15, 15);
+}
+.escolha-texto{
+    padding: 1.5rem;
+    width: 100%;
+
+}
+.correto{
+    background-color: green;
+}
+.incorreto{
+    background-color: red;
+}
+/* HUD */
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+.hud-prefixo{
+    text-align: center;
+    font-size: 2rem;
+    color: #56eb7b;
+}
+.hud-texto-principal{
+ text-align: center;
+ color: #56eb7b;
+}
+#progressoBarra{
+    width: 20rem;
+    height: 4rem;
+    border: 0.3rem solid #56eb7b;
+}
+
+#progressoBarraCheia{
+    height: 3.4rem;
+    background-color: #56eb7b;
+    width: 0%;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Apocaliptico - Jogar </title>
+    <link rel="stylesheet" href="/Src/Style.css/Jogo.css"
+</head>
+<body>
+    <div class="container">
+           <div id="jogo" class="justify-center flex-column">
+             <div id="hud">
+                <div id="hud-item">
+                  <p id="progressoText" class="hud-prefixo">
+                      Questao
+
+                  </p>
+                  <div id="progressoBarra">
+                    <div class="progressoBarraCheia"></div>
+
+                  </div>
+
+                </div>
+                <div id="hud-item">
+                    <p class="hud-prefixo" id="contadorDePerguntas">
+                        Pontos
+  
+                    </p>
+                    <h1 class="hud-texto-principal" id="pontos">
+                      0
+                    </h1>  
+  
+                  </div>
+
+
+             </div>
+
+            <h2 id="questao">Qual resposta temos para essas questoes</h2>
+            <div class="escolha-container">
+                <p class="escolha-prefixa">A</p>
+                <p class="escolha-texto" data-number="1">Opção 1</p>
+            </div>
+            <div class="escolha-container">
+                <p class="escolha-prefixa">B</p>
+                <p class="escolha-texto" data-number="2">Opção 2</p>
+            </div>
+            <div class="escolha-container">
+                <p class="escolha-prefixa">C</p>
+                <p class="escolha-texto" data-number="3"  >Opção 3</p>
+            </div>
+            <div class="escolha-container">
+                <p class="escolha-prefixa">D</p>
+                <p class="escolha-texto" data-number="4">Opção 4</p>
+            </div>
+            
+            
+           </div>
+
+    </div>
+    <script src="/Src/Javascript/Jogo.js"></script>
+</body>
+</html>
