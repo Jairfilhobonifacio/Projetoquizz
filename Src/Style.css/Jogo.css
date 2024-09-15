@@ -1,6 +1,10 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
 .escolha-container{
     display: flex;
-    margin-bottom: 05.rem;
+    margin-bottom: 0.5rem;
     width: 100%;
     border: 0.1rem solid rgba(6, 243, 65, 0.25);
     background-color: rgb(243, 243, 243);
@@ -51,4 +55,39 @@
     height: 3.4rem;
     background-color: #56eb7b;
     width: 0%;
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    #hud {
+        flex-direction: column-reverse;
+    }
+
+    #hud-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #hud-item-02 {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    #progressoBarra{
+        width: 100%;
+        max-width: 20rem;
+        min-height: 4rem;
+    }   
+    
+    #questao {
+       text-align: center; 
+    }
 }
