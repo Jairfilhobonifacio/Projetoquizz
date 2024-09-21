@@ -110,3 +110,35 @@
     margin-bottom: 15px; /* Espaçamento abaixo da imagem */
     padding: 1rem; /* Espaçamento interno da imagem */
 }
+
+    
+@media screen and (max-width: 600px) {
+    #hud {
+        flex-direction: column-reverse;
+    }
+    #hud-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #hud-item-02 {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+    #progressoBarra{
+        width: 100%;
+        max-width: 20rem;
+        min-height: 2rem;
+    }   
+    
+    #questao {
+       text-align: center; 
+    }
+
+    
+}
