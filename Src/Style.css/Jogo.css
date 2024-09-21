@@ -1,54 +1,112 @@
-.escolha-container{
-    display: flex;
-    margin-bottom: 05.rem;
-    width: 100%;
-    border: 0.1rem solid rgba(6, 243, 65, 0.25);
-    background-color: rgb(243, 243, 243);
+/* Estilo para o container das escolhas */
+.escolha-container {
+    display: flex; /* Alinha os elementos filhos em linha */
+    margin-bottom: 0.5rem; /* Espaçamento abaixo do container */
+    width: 100%; /* Ocupa toda a largura disponível */
+    border: 0.1rem solid rgba(6, 243, 65, 0.25); /* Borda com cor semi-transparente */
+    background-color: rgb(243, 243, 243); /* Cor de fundo do container */
 }
+
+/* Efeito ao passar o mouse sobre o container de escolhas */
 .escolha-container:hover {
-    cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem rgba(0, 255, 34, 0.5);
-    transition: transform 150ms;
-    transform: translateY(-0.1rem);
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    box-shadow: 0 0.4rem 1.4rem rgba(0, 255, 34, 0.5); /* Sombra ao redor do container */
+    transition: transform 150ms; /* Suaviza a transição do efeito */
+    transform: translateY(-0.1rem); /* Levanta o container ligeiramente ao passar o mouse */
 }
-.escolha-prefixa{
-    padding: 1.5rem 2.5rem;
-    background-color:#56eb7b;
-    color: rgb(176, 15, 15);
-}
-.escolha-texto{
-    padding: 1.5rem;
-    width: 100%;
 
+/* Estilo para o prefixo da escolha */
+.escolha-prefixa {
+    padding: 1.5rem 2.5rem; /* Espaçamento interno */
+    background-color: #56eb7b; /* Cor de fundo do prefixo */
+    color: rgb(176, 15, 15); /* Cor do texto */
 }
-.correto{
-    background-color: green;
+
+/* Estilo para o texto da escolha */
+.escolha-texto {
+    padding: 1.5rem; /* Espaçamento interno */
+    width: 100%; /* Ocupa toda a largura do container */
 }
-.incorreto{
-    background-color: red;
+
+/* Estilo para respostas corretas */
+.correto {
+    background-color: green; /* Cor de fundo para resposta correta */
 }
-/* HUD */
+
+/* Estilo para respostas incorretas */
+.incorreto {
+    background-color: red; /* Cor de fundo para resposta incorreta */
+}
+
+/* HUD (Heads-Up Display) */
 #hud {
-    display: flex;
-    justify-content: space-between;
-}
-.hud-prefixo{
-    text-align: center;
-    font-size: 2rem;
-    color: #56eb7b;
-}
-.hud-texto-principal{
- text-align: center;
- color: #56eb7b;
-}
-#progressoBarra{
-    width: 20rem;
-    height: 4rem;
-    border: 0.3rem solid #56eb7b;
+    display: flex; /* Alinha os elementos do HUD em linha */
+    justify-content: space-between; /* Espaça os elementos igualmente */
 }
 
-#progressoBarraCheia{
-    height: 3.4rem;
-    background-color: #56eb7b;
-    width: 0%;
+/* Estilo para o prefixo do HUD */
+.hud-prefixo {
+    text-align: center; /* Centraliza o texto */
+    font-size: 2rem; /* Tamanho da fonte */
+    color: #56eb7b; /* Cor do texto */
+}
+
+/* Estilo para o texto principal do HUD */
+.hud-texto-principal {
+    text-align: center; /* Centraliza o texto */
+    color: #56eb7b; /* Cor do texto */
+}
+
+/* Estilo da barra de progresso */
+#progressoBarra {
+    width: 20rem; /* Largura da barra de progresso */
+    height: auto; /* Altura automática para manter proporção */
+    border: 0.3rem solid #4CAF50; /* Borda da barra de progresso */
+}
+
+/* Estilo da parte cheia da barra de progresso */
+#progressoBarraCheia {
+    height: 3.4rem; /* Altura da parte cheia */
+    background-color: #4CAF50; /* Cor de fundo da parte cheia */
+}
+
+/* Estilo do botão de resposta */
+#botao-resposta {
+    position: absolute; /* Posiciona o botão de forma absoluta */
+    top: 80%; /* Distância do topo da tela */
+    left: 50%; /* Centraliza o botão horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta o botão para ficar centralizado */
+    background-color: #4CAF50; /* Cor de fundo do botão */
+    color: #f70f0f; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Arredonda os cantos do botão */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    font-size: 18px; /* Tamanho da fonte do botão */
+}
+
+/* Classe para esconder elementos */
+.hidden {
+    display: none; /* Oculta o elemento */
+}
+
+/* Classe para mostrar elementos */
+.mostrar {
+    display: block; /* Exibe o elemento como um bloco */
+}
+
+/* Estilo para a explicação do cenário */
+#explicacao-cenario {
+    transition: opacity 0.5s; /* Suaviza a transição de opacidade */
+}
+
+/* Estilo para a imagem da pergunta */
+#imagem-pergunta {
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 600px; /* Define um tamanho máximo para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Arredonda os cantos da imagem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+    margin-bottom: 15px; /* Espaçamento abaixo da imagem */
+    padding: 1rem; /* Espaçamento interno da imagem */
 }

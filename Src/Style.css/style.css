@@ -1,113 +1,146 @@
+/* Variáveis e Estilo Base */
 :root {
-    background-color: #ecf5ff;
-    font-size: 62.5%;
-}
-*{
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
+    background-color: #ecf5ff; /* Cor de fundo da página */
+    font-size: 62.5%; /* Tamanho base da fonte exemplo (10px = 1rem) */
 }
 
-h1,
-h2,
-h3,
-h4 {
-    margin-bottom: 1rem;
+/* Estilo Global */
+* {
+    box-sizing: border-box; /* Inclui padding e border no tamanho total dos elementos */
+    font-family: Arial, Helvetica, sans-serif; /* Fonte padrão da página */
+    margin: 0; /* Remove margem padrão */
+    padding: 0; /* Remove padding padrão */
+    color: #333; /* Cor do texto */
 }
 
-h1{
-    font-size: 5.4rem;
-    color: #56eb7b;
-    margin-bottom: 5rem;
+/* Estilo para Cabeçalhos */
+h1, h2, h3, h4 {
+    margin-bottom: 1rem; /* Margem inferior padrão para cabeçalhos */
 }
-h1 > span{
-    font-size: 2.4rem;
-    font-weight: 500;
+
+h1 {
+    font-size: 5.4rem; /* Tamanho da fonte para h1 */
+    color: #56eb7b; /* Cor do texto para h1 */
+    margin-bottom: 5rem; /* Margem inferior para h1 */
+}
+
+h1 > span {
+    font-size: 2.4rem; /* Tamanho do texto dentro do span em h1 */
+    font-weight: 500; /* Peso da fonte para span */
 }
 
 h2 {
-    font-size: 4.2rem;
-    margin-bottom: 4rem;
-    font-weight: 700;
+    font-size: 4.2rem; /* Tamanho da fonte para h2 */
+    margin-bottom: 4rem; /* Margem inferior para h2 */
+    font-weight: 700; /* Peso da fonte para h2 */
 }
+
 h3 {
-    font-size: 2.8rem;
-    font-weight: 500;
+    font-size: 2.8rem; /* Tamanho da fonte para h3 */
+    font-weight: 500; /* Peso da fonte para h3 */
 }
 
-/*Utilidades */
-
+/* Classes Utilitárias */
 .container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center ;
-    max-width: 80rem;
-    margin: 0 auto;
-    padding: 2rem;
+    width: 100vw; /* Largura total da tela */
+    height: 100vh; /* Altura total da tela */
+    display: flex; /* Flexbox para centralizar conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    max-width: 80rem; /* Largura máxima do container */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 2rem; /* Padding interno do container */
 }
-.flex-column{
-    display: flex;
-    flex-direction: column;
-}
-.flex-center{
-    justify-content: center;
-    align-items: center;
-}
-.justify-center{
-    justify-content: center;
-}
-.text-center{
-    text-align: center;
-}
-.hidden{
-    display: none;
-}
-/*Butões*/
 
-.btn{
-    font-size: 1.8rem;
-    padding: 1rem 0;
-    width: 20rem;
-    text-align: center;
-    border: 0.1rem solid #56eb7b;
-    margin-bottom: 1rem;
-    text-decoration: none;
-    color: #56eb7b;
-    background: white;
+.flex-column {
+    display: flex; /* Flexbox em coluna */
+    flex-direction: column; /* Direção da coluna */
+}
+
+.flex-center {
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.justify-center {
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.text-center {
+    text-align: center; /* Centraliza o texto */
+}
+
+.hidden {
+    display: none; /* Esconde o elemento */
+}
+
+/* Estilo dos Botões */
+.btn {
+    font-size: 1.8rem; /* Tamanho da fonte para botões */
+    padding: 1rem 0; /* Padding interno do botão */
+    width: 20rem; /* Largura do botão */
+    text-align: center; /* Centraliza o texto no botão */
+    border: 0.1rem solid #56eb7b; /* Borda do botão */
+    margin-bottom: 1rem; /* Margem inferior do botão */
+    text-decoration: none; /* Remove sublinhado de links */
+    color: #56eb7b; /* Cor do texto do botão */
+    background: white; /* Fundo branco para o botão */
 }
 
 .btn:hover {
-    cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 hwb(118 2% 9% / 0.5);
-    transform: translateY(-0.1rem);
-    transition: transform 150ms;
-}
-.btn[disabled]:hover{
-    cursor:not-allowed;
-    box-shadow: none;
-    transform: none;
-    
-}
-.correto{
-    background-color: green;
-}
-.incorreto{
-    background-color: red;
+    cursor: pointer; /* Muda o cursor para ponteiro ao passar o mouse */
+    box-shadow: 0 0.4rem 1.4rem 0 hwb(118 2% 9% / 0.5); /* Sombra ao passar o mouse */
+    transform: translateY(-0.1rem); /* Levanta o botão ao passar o mouse */
+    transition: transform 150ms; /* Transição suave para o efeito de levitar */
 }
 
-/* HUD */
+.btn[disabled]:hover {
+    cursor: not-allowed; /* Muda o cursor para indicar que não é interativo */
+    box-shadow: none; /* Remove a sombra para botões desabilitados */
+    transform: none; /* Remove a transformação para botões desabilitados */
+}
+
+/* Estilos para Respostas Corretas e Incorretas */
+.correto {
+    background-color: green; /* Fundo verde para respostas corretas */
+}
+
+.incorreto {
+    background-color: red; /* Fundo vermelho para respostas incorretas */
+}
+
+/* Estilos para a HUD (Heads-Up Display) */
 #hud {
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* Flexbox para a HUD */
+    justify-content: space-between; /* Espaçamento entre os itens da HUD */
 }
-.hud-prefixo{
-    text-align: center;
-    font-size: 2rem;
+
+.hud-prefixo {
+    text-align: center; /* Centraliza o texto */
+    font-size: 2rem; /* Tamanho da fonte para prefixos na HUD */
 }
-.hud-texto-principal{
- text-align: center;
+
+.hud-texto-principal {
+    text-align: center; /* Centraliza o texto principal da HUD */
+}
+
+/* Estilos para Formulários */
+form {
+    width: 100%; /* Largura total do formulário */
+    display: flex; /* Flexbox para o formulário */
+    flex-direction: column; /* Direção da coluna */
+    align-items: center; /* Centraliza itens do formulário */
+}
+
+input {
+    margin-bottom: 1rem; /* Margem inferior dos inputs */
+    width: 20rem; /* Largura dos inputs */
+    padding: 1.5rem; /* Padding interno dos inputs */
+    font-size: 1.8rem; /* Tamanho da fonte dos inputs */
+    border: none; /* Remove borda padrão dos inputs */
+    box-shadow: 0 0.1rem 1.4rem 0 #44d65080; /* Sombra para inputs */
+}
+
+input::placeholder {
+    color: #aaa; /* Cor do placeholder */
 }

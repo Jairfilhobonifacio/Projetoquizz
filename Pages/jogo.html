@@ -3,60 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Apocaliptico - Jogar </title>
-    <link rel="stylesheet" href="/Src/Style.css/Jogo.css"
+    <title>Quiz Apocaliptico - Jogar</title>
+    <link rel="stylesheet" href="/Src/Style.css/Jogo.css"> <!-- Link para o arquivo de estilo CSS -->
 </head>
 <body>
+    <!-- Container Principal -->
     <div class="container">
-           <div id="jogo" class="justify-center flex-column">
-             <div id="hud">
+        <!-- Container do Jogo -->
+        <div id="jogo" class="justify-center flex-column">
+            <!-- HUD (Heads-Up Display) com Progresso e Pontos -->
+            <div id="hud">
+                <!-- Progresso da Questão -->
                 <div id="hud-item">
-                  <p id="progressoText" class="hud-prefixo">
-                      Questao
-
-                  </p>
-                  <div id="progressoBarra">
-                    <div class="progressoBarraCheia"></div>
-
-                  </div>
-
+                    <p id="progressoText" class="hud-prefixo">Questão</p>
+                    <div id="progressoBarra">
+                        <div id="progressoBarraCheia"></div> <!-- Parte cheia da barra de progresso -->
+                    </div>
                 </div>
+
+                <!-- Pontuação -->
                 <div id="hud-item">
-                    <p class="hud-prefixo" id="contadorDePerguntas">
-                        Pontos
-  
-                    </p>
-                    <h1 class="hud-texto-principal" id="pontos">
-                      0
-                    </h1>  
-  
-                  </div>
+                    <p class="hud-prefixo" id="contadorDePerguntas">Pontos</p>
+                    <h1 class="hud-texto-principal" id="pontos">0</h1> <!-- Exibe os pontos atuais -->
+                </div>
+            </div>
 
+            <!-- Imagem da Pergunta -->
+            <img id="imagem-pergunta" src="../Src/Assets/Apocalipyse-4.jpg" alt="Imagem da pergunta">
 
-             </div>
+            <!-- Container de Botão de Resposta -->
+            <div id="container-botao">
+                <button id="botao-resposta" class="hidden">Resposta</button> <!-- Botão que será exibido após a escolha -->
+            </div>
 
-            <h2 id="questao">Qual resposta temos para essas questoes</h2>
+            <!-- Explicação do Cenário e Questão -->
+            <h2 id="explicacao-cenario"></h2>
+            <h2 id="questao">Qual resposta temos para essas questões</h2>
+
+            <!-- Container de Opções de Resposta -->
             <div class="escolha-container">
+                <audio id="som-acerto" src="/Src/Assets/power-punch-192118.mp3"></audio>
+                <audio id="som-erro" src="/Src/Assets/error-sound-39539.mp3"></audio>
                 <p class="escolha-prefixa">A</p>
-                <p class="escolha-texto" data-number="1">Opção 1</p>
+                <p class="escolha-texto" data-number="1">Opção 1</p> <!-- Opção de resposta 1 -->
             </div>
             <div class="escolha-container">
                 <p class="escolha-prefixa">B</p>
-                <p class="escolha-texto" data-number="2">Opção 2</p>
+                <p class="escolha-texto" data-number="2">Opção 2</p> <!-- Opção de resposta 2 -->
             </div>
             <div class="escolha-container">
                 <p class="escolha-prefixa">C</p>
-                <p class="escolha-texto" data-number="3"  >Opção 3</p>
+                <p class="escolha-texto" data-number="3">Opção 3</p> <!-- Opção de resposta 3 -->
             </div>
             <div class="escolha-container">
                 <p class="escolha-prefixa">D</p>
-                <p class="escolha-texto" data-number="4">Opção 4</p>
+                <p class="escolha-texto" data-number="4">Opção 4</p> <!-- Opção de resposta 4 -->
             </div>
-            
-            
-           </div>
-
+        </div>
     </div>
-    <script src="/Src/Javascript/Jogo.js"></script>
+
+    <script src="/Src/Javascript/Jogo.js"></script> <!-- Link para o arquivo de script JavaScript -->
 </body>
 </html>
