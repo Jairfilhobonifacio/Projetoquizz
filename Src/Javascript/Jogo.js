@@ -16,6 +16,7 @@ let aceitandoPerguntas = false;
 let pontos = 0;
 let contadorDePerguntas = 0;
 let questoesDisponiveis = [];
+ 
 
 // Questões do quiz
 let questoes = [
@@ -27,7 +28,7 @@ let questoes = [
         escolha4: "Tento encontrar armas para me proteger.",
         resposta: 3,
         explicacao: "O mundo foi devastado por um vírus mortal que transformou a maioria da população em zumbis. Você está em sua casa quando recebe a notícia.",
-        imagem: "../Src/Assets/Apocalipyse-4.jpg"
+        imagem: "../Src/Assets/apocalipyse-4.jpg"
     },
     {
         questao: "Onde você prefere se esconder e estabelecer uma base segura?",
@@ -37,6 +38,7 @@ let questoes = [
         escolha4: "Um shopping.",
         resposta: 1,
         explicacao: "Você conseguiu reunir alguns suprimentos e agora precisa encontrar um lugar seguro para se esconder.",
+        imagem: "../Src/Assets/apocalipyse-3.jpg"
     },
     {
         questao: "Como você lida com encontros hostis em um mundo pós-apocalíptico?",
@@ -46,6 +48,7 @@ let questoes = [
         escolha4: "Fujo e deixo os outros lidarem com a situação.",
         resposta: 3,
         explicacao: "Durante uma busca por mais suprimentos, você encontra um grupo de sobreviventes hostis.",
+        imagem: "../Src/Assets/apocalipyse-2.jpg"
     },
     {
         questao: "Qual é a sua abordagem em relação aos recursos escassos, como comida e água?",
@@ -55,6 +58,7 @@ let questoes = [
         escolha4: "Tento me manter próximo de mercados e lugares que tenham comida de fácil acesso.",
         resposta: 2,
         explicacao: "Os recursos estão se esgotando e você precisa decidir como gerenciar o que resta.",
+        imagem: "../Src/Assets/apocalipyse-7.jpg"
     },
     {
         questao: "Qual vai ser o rango de hoje?",
@@ -64,6 +68,7 @@ let questoes = [
         escolha4: "Que o canibalismo comece.",
         resposta: 3,
         explicacao: "Você está sedento por um fast food superprocessado, mas lembra que eles acabaram.",
+        imagem: "../Src/Assets/apocalipyse.jpg"
     },
     {
         questao: "Qual é a primeira prioridade ao tentar reconstruir uma sociedade?",
@@ -73,6 +78,7 @@ let questoes = [
         escolha4: "Virar o MR Catra.",
         resposta: 2,
         explicacao: "Após meses de sobrevivência, você e seu grupo decidem começar a reconstruir uma sociedade.",
+        imagem: "../Src/Assets/apocalipyse -6.jpg"
     },
 ];
 
@@ -98,8 +104,8 @@ const obterNovaPergunta = () => {
     contadorDePerguntas++; // Incrementa o contador de perguntas
     progressoText.innerText = `Questão ${contadorDePerguntas} / ${MAXIMO_QUESTOES}`; // Atualiza o texto do progresso
     // Carregar a barra de progresso
-    progressoBarraCheia.style.width = `${(contadorDePerguntas / MAXIMO_QUESTOES) * 324}px`;
-
+    progressoBarraCheia.style.width = `${(contadorDePerguntas / MAXIMO_QUESTOES) * 100}%`;
+    
     questaoAtual = questoesDisponiveis.shift(); // Obtém a próxima pergunta
     questao.innerText = questaoAtual.questao; // Atualiza o texto da pergunta
     imagemPergunta.src = questaoAtual.imagem; // Atualiza a imagem da pergunta

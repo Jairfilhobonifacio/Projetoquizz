@@ -62,6 +62,7 @@
     width: 20rem; /* Largura da barra de progresso */
     height: auto; /* Altura automática para manter proporção */
     border: 0.3rem solid #4CAF50; /* Borda da barra de progresso */
+    overflow: hidden;
 }
 
 /* Estilo da parte cheia da barra de progresso */
@@ -104,6 +105,7 @@
 #imagem-pergunta {
     width: 100%; /* Ocupa toda a largura disponível */
     max-width: 600px; /* Define um tamanho máximo para a imagem */
+    max-height: 330px;
     height: auto; /* Mantém a proporção da imagem */
     border-radius: 10px; /* Arredonda os cantos da imagem */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
@@ -140,5 +142,16 @@
        text-align: center; 
     }
 
-    
+}
+
+@media screen and (max-width: 320px) {
+    #imagem-pergunta {
+        max-width: 280px;
+    }
+
+    #progressoBarra{
+        width: 100%;
+        max-width: 15rem;
+        min-height: 2rem;
+    }   
 }
