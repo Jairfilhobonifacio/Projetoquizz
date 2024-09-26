@@ -144,3 +144,11 @@ input {
 input::placeholder {
     color: #aaa; /* Cor do placeholder */
 }
+
+
+/* Backgroud */
+body {
+    background-image: url(../Assets/Imagem\ de\ fundo\ Inicial.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
