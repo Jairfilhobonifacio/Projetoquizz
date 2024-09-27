@@ -151,7 +151,7 @@ escolhas.forEach(escolha => {
 // Função para incrementar pontos
 const incrementarPontos = num => {
     pontos += num; // Adiciona os pontos
-    pontosText.innerText = pontos; // Atualiza o texto da pontuação
+ 
 };
 
 // Inicia o jogo
