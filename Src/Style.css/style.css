@@ -149,6 +149,7 @@ input::placeholder {
 /* Backgroud */
 body {
     background-image: url(../Assets/Imagem\ de\ fundo\ Inicial.jpeg);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
 }
+
