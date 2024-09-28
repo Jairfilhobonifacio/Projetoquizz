@@ -12,6 +12,11 @@
     padding: 0; /* Remove padding padrão */
     color: #333; /* Cor do texto */
 }
+ /* Fonte do Título do jogo - h1 */
+@font-face {
+    font-family: fonteTituloInicial;
+    src: url(https://www.fontspace.com/scorched-earth-font-f14776);
+}
 
 /* Estilo para Cabeçalhos */
 h1, h2, h3, h4 {
@@ -20,8 +25,9 @@ h1, h2, h3, h4 {
 
 h1 {
     font-size: 5.4rem; /* Tamanho da fonte para h1 */
-    color: #56eb7b; /* Cor do texto para h1 */
+    color: #17802cba; /* Cor do texto para h1 */
     margin-bottom: 5rem; /* Margem inferior para h1 */
+    font-family: fonteTituloInicial;
 }
 
 h1 > span {
