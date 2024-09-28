@@ -85,13 +85,13 @@ h3 {
     text-decoration: none; /* Remove sublinhado de links */
     color: #56eb7b; /* Cor do texto do botão */
     background: white; /* Fundo branco para o botão */
+    transition: 150ms; /* Transição suave para o efeito de levitar */
 }
 
 .btn:hover {
     cursor: pointer; /* Muda o cursor para ponteiro ao passar o mouse */
     box-shadow: 0 0.4rem 1.4rem 0 hwb(118 2% 9% / 0.5); /* Sombra ao passar o mouse */
     transform: translateY(-0.1rem); /* Levanta o botão ao passar o mouse */
-    transition: transform 150ms; /* Transição suave para o efeito de levitar */
 }
 
 .btn[disabled]:hover {
@@ -144,3 +144,13 @@ input {
 input::placeholder {
     color: #aaa; /* Cor do placeholder */
 }
+
+
+/* Backgroud */
+body {
+    background-image: url(../Assets/Imagem\ de\ fundo\ Inicial.jpeg);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center-center;
+}
+
