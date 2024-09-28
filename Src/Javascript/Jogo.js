@@ -17,6 +17,11 @@ let pontos = 0;
 let contadorDePerguntas = 0;
 let questoesDisponiveis = [];
 let erros = 0;
+const MAXIMO_ERROS = 3; // Limite de 3 erros
+
+// Constantes
+const CORRETO_BONUS = 10; // Pontos ganhos por uma resposta correta
+const MAXIMO_QUESTOES = 6; // Máximo de perguntas que podem ser feitas
 
 // Questões do quiz
 let questoes = [
@@ -82,14 +87,11 @@ let questoes = [
     },
 ];
 
-// Constantes
-const CORRETO_BONUS = 10; // Pontos ganhos por uma resposta correta
-const MAXIMO_QUESTOES = 6; // Máximo de perguntas que podem ser feitas
-
 // Função para iniciar o jogo
 const iniciarJogo = () => {
     contadorDePerguntas = 0; // Reseta o contador de perguntas
     pontos = 0; // Reseta os pontos
+    erros = 0; // Reseta os erros
     questoesDisponiveis =  [...questoes]; // Cópia das questões disponíveis
     obterNovaPergunta(); // Obtém a primeira pergunta
 };
@@ -98,8 +100,7 @@ const iniciarJogo = () => {
 const obterNovaPergunta = () => {
     if (questoesDisponiveis.length === 0 || contadorDePerguntas >= MAXIMO_QUESTOES) {
         const { pontos, tipo } = calcularTipoSobrevivente(); // Calcula a pontuação e tipo de sobrevivente
-        return window.location.assign(`resultado.html?pontos=${pontos}&tipo=${tipo}`); // Redireciona para a página final com parâmetros
-        
+        return window.location.assign(`resultado.html?pontos=${pontos}&tipo=${tipo}&erros=${erros}`); // Redireciona para a página final com parâmetros
     }
 
     contadorDePerguntas++; // Incrementa o contador de perguntas
@@ -120,17 +121,16 @@ const obterNovaPergunta = () => {
     aceitandoPerguntas = true; // Permite que o jogador escolha uma resposta
 };
 
-
-
-const carregarResultado = () =>{
+// Função para carregar o resultado no HTML final
+const carregarResultado = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const tipo = urlParams.get('tipo') || 'Sobrevivente Iniciante';
     const erros = urlParams.get('erros') || 0; 
     const pontos = urlParams.get('pontos') || 0; 
     const resultadoElement = document.getElementById("sobre");
-    resultadoElement.innerText =`O tipo de sobrevivente é : ${tipo} , e você errou tudo isso de questões ${erros}   , fez isso de pontos:  ${pontos} `;
-    return;
-}
+    resultadoElement.innerText = `O tipo de sobrevivente é: ${tipo}. Você cometeu ${erros} erros e fez ${pontos} pontos.`;
+};
+
 // Funções para incrementar e decrementar pontos
 const incrementarPontos = num => {
     pontos += num; // Adiciona os pontos
@@ -155,52 +155,57 @@ escolhas.forEach(escolha => {
         // Determina a classe a ser aplicada (correto ou incorreto)
         const classToApply = respostaSelecionada == questaoAtual.resposta ? 'correto' : 'incorreto';
         
-                if (classToApply === "correto") {
-                    incrementarPontos(CORRETO_BONUS); // Incrementa os pontos
-                    somAcerto.play(); // Toca o som de acerto
-                    botaoResposta.classList.add("mostrar"); // Mostra o botão de resposta
-                    botaoResposta.innerText = "Resposta Certa!";
-                    setTimeout(() => {
-                        escolhaSelecionada.parentElement.classList.remove(classToApply); // Remove a classe
-                        botaoResposta.classList.remove("mostrar"); // Esconde o botão de resposta
-                        obterNovaPergunta(); // Carrega a próxima pergunta
-                    }, 1000);
-                } else {
-                    somErro.play(); // Toca o som de erro
-                    botaoResposta.classList.add("mostrar"); // Mostra o botão de resposta
-                    botaoResposta.innerText = "Resposta Errada! Tente novamente!";
-                    erros++; // Incrementa o número de erros
-                    decrementarPontos(5); // Penaliza com a perda de pontos
-                    setTimeout(() => {
-                        escolhaSelecionada.parentElement.classList.remove(classToApply); // Remove a classe
-                        botaoResposta.classList.remove("mostrar"); // Esconde o botão de resposta
-                        aceitandoPerguntas = true; // Permite nova tentativa
-                    }, 1000);
-                }
+        if (classToApply === "correto") {
+            incrementarPontos(CORRETO_BONUS); // Incrementa os pontos
+            somAcerto.play(); // Toca o som de acerto
+            botaoResposta.classList.add("mostrar"); // Mostra o botão de resposta
+            botaoResposta.innerText = "Resposta Certa!";
+            setTimeout(() => {
+                escolhaSelecionada.parentElement.classList.remove(classToApply); // Remove a classe
+                botaoResposta.classList.remove("mostrar"); // Esconde o botão de resposta
+                obterNovaPergunta(); // Carrega a próxima pergunta
+            }, 1000);
+        } else {
+            somErro.play(); // Toca o som de erro
+            botaoResposta.classList.add("mostrar"); // Mostra o botão de resposta
+            botaoResposta.innerText = "Resposta Errada! Tente novamente!";
+            erros++; // Incrementa o número de erros
+            if (erros >= MAXIMO_ERROS) {
+                const { pontos, tipo } = calcularTipoSobrevivente();
+                return window.location.assign(`resultado.html?pontos=${pontos}&tipo=${tipo}&erros=${erros}`);
+            }   
+           
+            decrementarPontos(5); // Penaliza com a perda de pontos
+            setTimeout(() => {
+                escolhaSelecionada.parentElement.classList.remove(classToApply); // Remove a classe
+                botaoResposta.classList.remove("mostrar"); // Esconde o botão de resposta
+                aceitandoPerguntas = true; // Permite nova tentativa
+            }, 1000);
+        }
         escolhaSelecionada.parentElement.classList.add(classToApply); // Adiciona a classe à escolha
     });
 });
 
 // Função para calcular o tipo de sobrevivente
 const calcularTipoSobrevivente = () => {
- 
     const acertos = pontos / CORRETO_BONUS; // Número de acertos
-      let tipo = ""
-    if (acertos <= 50) {
+    let tipo = "";
+
+    // Atribuição lógica dos tipos de sobrevivente
+    if (acertos >= 5) {
         tipo = "Você é um sobrevivente excepcional!";
-    } else if (acertos <= 40) {
+    } else if (acertos >= 4) {
         tipo = "Você é um sobrevivente experiente.";
-    } else if (acertos >= 30) {
+    } else if (acertos >= 3) {
         tipo = "Você é um sobrevivente comum.";
-    } else if (acertos  >= 20) {
+    } else if (acertos >= 2) {
         tipo = "Você é um sobrevivente iniciante.";
     } else {
         tipo = "Você precisa melhorar para sobreviver.";
-        
     }
-    return{tipo, pontos}
+    
+    return { tipo, pontos };
 };
 
-iniciarJogo()
-
-
+// Inicia o jogo
+iniciarJogo();
