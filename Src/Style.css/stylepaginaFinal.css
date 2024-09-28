@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b1b1b;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    z-index: 2;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    width: 80%;
+    max-width: 600px; /* Limita o tamanho em telas grandes */
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #2b7a0b; /* Verde escuro */
+    text-shadow: 0px 0px 10px #2b7a0b;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.input-text {
+    padding: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    width: 80%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px;
+    background-color: #2b7a0b; /* Verde escuro */
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    border: 2px solid #fff;
+}
+
+.btn:hover {
+    background-color: #1f5e08; /* Verde mais escuro */
+    transform: scale(1.05);
+    border-color: #2b7a0b;
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Assets/Imagem\ de\ fundo\ Inicial.jpeg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.3);
+    z-index: 1;
+}
+
+/* Melhorando a tipografia */
+.titulo {
+    font-weight: 700;
+    color: #2b7a0b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.score {
+    font-size: 1.8rem;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+/* MEDIA QUERIES PARA RESPONSIVIDADE */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    .input-text {
+        width: 90%;
+    }
+    .btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    .input-text {
+        font-size: 1rem;
+        padding: 8px;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+}

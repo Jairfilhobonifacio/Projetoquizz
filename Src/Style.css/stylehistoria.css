@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    background: url('../Assets/fundosala.jpg') no-repeat center center fixed; 
+    background-size: cover; /* Faz com que a imagem cubra toda a tela */
+    background-color: #111; /* Fundo escuro como fallback */
+    color: #ffffff; /* Texto branco */
+    font-family: 'Courier New', monospace; /* Fonte monoespaçada */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda a altura da janela */
+    overflow: hidden; /* Evita rolagem na página */
+}
+
+
+.container {
+    width: 80vw; /* Largura do container */
+    max-width: 800px; /* Largura máxima */
+    height: 400px; /* Altura do container */
+    position: relative; /* Para o botão aparecer no contexto correto */
+    border: 5px solid #ff0000; /* Borda vermelha */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7); /* Sombra da tela */
+    display: flex;
+    flex-direction: column; /* Alinha o texto e o botão em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    display: flex; /* Usado para centralizar o texto */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    position: relative; /* Para colocar o vídeo em fundo */
+}
+
+#tv-video {
+    width: 100%; /* Preenche a tela */
+    height: 100%; /* Preenche a tela */
+    object-fit: cover; /* Cobre toda a área */
+    position: absolute; /* Para o vídeo ficar em segundo plano */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Faz o vídeo ficar abaixo do texto */
+}
+
+#story {
+    opacity: 0; /* Começa invisível */
+    transition: opacity 1s; /* Transição suave */
+    text-align: center; /* Centraliza o texto */
+    font-size: 1.5em; /* Tamanho da fonte */
+    position: relative; /* Para o texto ficar em cima do vídeo */
+    z-index: 2; /* Faz o texto ficar acima do vídeo */
+}
+
+#start-button {
+    position: absolute; /* Permite que o botão fique no meio da tela */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição para centralizar */
+    margin-top: 20px; /* Espaçamento acima do botão */
+    padding: 10px 20px; /* Padding do botão */
+    font-size: 1.2em; /* Tamanho da fonte do botão */
+    color: #fff; /* Cor do texto do botão */
+    background-color: #d9534f; /* Cor de fundo do botão */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave para cor do botão */
+    z-index: 3; /* Faz o botão ficar acima do vídeo */
+}
+
+#start-button:hover {
+    background-color: #c9302c; /* Cor do botão ao passar o mouse */
+}
