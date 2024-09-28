@@ -3,35 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parabens!</title>
-    <link rel="stylesheet" href="/Src/Style.css/style.css" />
+    <title>Você Sobreviveu!</title>
+    <link rel="stylesheet" href="/Src/Style.css/stylepaginaFinal.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-         <div id="Final" class="flex-center flex-column">
-            <h1 id="pontuaçãofinal">0</h1>
-           <form>
-                 <input type="text"
-                  name="username" 
-                  id="username" 
-                  placeholder="username"
-                  />   
-                 <button 
-                 type="submit" 
-                 class="btn" 
-                 id="saveScoreBtn" 
-                 onclick="saveHighScore(event)"  >
-                
-                Save</button>
-
-           </form> 
-           <a class="btn" href="/Pages/jogo.html" >Jogar Denovo</a>
-           <a class="btn" href="/">Ir para o Inicio </a>
-         </div>
-         </div>
-<script src="Final.js"></script>
-
-   
-
+        <div id="Final" class="flex-center flex-column">
+            <h1 id="mensagemfinal" class="glitch">Parabéns, você sobreviveu!</h1>
+            <h2 id="pontuaçãofinal" class="score">Pontuação: 0</h2>
+            <form class="formulario">
+                <input type="text" name="username" id="username" placeholder="Insira seu nome" class="input-text" />   
+                <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)">
+                    Salvar Pontuação
+                </button>
+            </form> 
+            <a class="btn" href="/Pages/jogo.html">Jogar de Novo</a>
+            <a class="btn" href="/">Ir para o Início</a>
+        </div>
+    </div>
+    <div class="background-overlay"></div>
+    <script src="Final.js"></script>
 </body>
 </html>
