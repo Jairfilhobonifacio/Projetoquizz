@@ -15,14 +15,15 @@
         font-family: "Baskervville SC", serif;
         font-weight: 400;
         font-style: normal;
-      }
+      } /*FONTE DAS QUESTÕES */
+      @font-face: {
+        font-family: fonteTitulo;
+        src: url(Src/Assents/misc/Scorchedearth-4Ljp.otf);
+    }  /* Fonte do Título do jogo - h1 */
       
 }
- /* Fonte do Título do jogo - h1 */
- @font-face: {
-    font-family: fonteTitulo;
-    src: url(Src/Assents/misc/Scorchedearth-4Ljp.otf);
-}
+ 
+ 
 
 /* Estilo para Cabeçalhos */
 h1, h2, h3, h4 {
