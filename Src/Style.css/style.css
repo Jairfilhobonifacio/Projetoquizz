@@ -21,7 +21,7 @@
  /* Fonte do Título do jogo - h1 */
  @font-face: {
     font-family: fonteTitulo;
-    src: url(Src/Assents/Scorchedearth-4Ljp.otf);
+    src: url(Src/Assents/misc/Scorchedearth-4Ljp.otf);
 }
 
 /* Estilo para Cabeçalhos */
