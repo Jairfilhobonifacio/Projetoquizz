@@ -7,13 +7,20 @@
 /* Estilo Global */
 * {
     box-sizing: border-box; /* Inclui padding e border no tamanho total dos elementos */
-    font-family: Arial, Helvetica, sans-serif; /* Fonte padrão da página */
+    /*font-family: Arial, Helvetica, sans-serif; /* Fonte padrão da página */
     margin: 0; /* Remove margem padrão */
     padding: 0; /* Remove padding padrão */
     color: #2d2929; /* Cor do texto */
+    /*@font-face: {
+        font-family: fonteTitulo;
+        src: url(Src/Assents/Scorchedearth-4Ljp.otf);
+    }
 }
  /* Fonte do Título do jogo - h1 */
-
+ @font-face: {
+    font-family: fonteTitulo;
+    src: url(Src/Assents/Scorchedearth-4Ljp.otf);
+}
 
 /* Estilo para Cabeçalhos */
 h1, h2, h3, h4 {
@@ -24,6 +31,7 @@ h1 {
     font-size: 5.4rem; /* Tamanho da fonte para h1 */
     color: #17802cba; /* Cor do texto para h1 */
     margin-bottom: 5rem; /* Margem inferior para h1 */
+    font-family: fonteTitulo;
 }
 
 
@@ -157,3 +165,12 @@ body {
     background-position: center-center;
 }
 
+/* TESTE DA FONTE*/
+.container
+  h1 {
+    @font-face: {
+        font-family: fonteTitulo;
+        src: url(Src/Assents/Scorchedearth-4Ljp.otf);
+}
+
+}
