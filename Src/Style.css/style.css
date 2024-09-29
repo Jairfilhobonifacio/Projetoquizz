@@ -11,10 +11,12 @@
     margin: 0; /* Remove margem padrão */
     padding: 0; /* Remove padding padrão */
     color: #2d2929; /* Cor do texto */
-    /*@font-face: {
-        font-family: fonteTitulo;
-        src: url(Src/Assents/Scorchedearth-4Ljp.otf);
-    }
+    .baskervville-sc-regular {
+        font-family: "Baskervville SC", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      
 }
  /* Fonte do Título do jogo - h1 */
  @font-face: {
