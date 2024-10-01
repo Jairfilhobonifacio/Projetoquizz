@@ -7,7 +7,6 @@
 /* Estilo Global */
 * {
     box-sizing: border-box; /* Inclui padding e border no tamanho total dos elementos */
-    /*font-family: Arial, Helvetica, sans-serif; /* Fonte padrão da página */
     margin: 0; /* Remove margem padrão */
     padding: 0; /* Remove padding padrão */
     color: #2d2929; /* Cor do texto */
@@ -17,8 +16,10 @@
         font-style: normal;
       } /*FONTE DAS QUESTÕES */
       @font-face: {
-        font-family: fonteTitulo;
+        font-family: fonteToxia;
         src: url(Src/Assents/misc/Scorchedearth-4Ljp.otf);
+        font-weight: normal;
+        font-style: normal;
     }  /* Fonte do Título do jogo - h1 */
       
 }
