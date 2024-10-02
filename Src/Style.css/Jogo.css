@@ -1,10 +1,17 @@
 /* Estilo para o container das escolhas */
-.escolha-container {
-    display: flex; /* Alinha os elementos filhos em linha */
-    margin-bottom: 0.5rem; /* Espaçamento abaixo do container */
-    width: 100%; /* Ocupa toda a largura disponível */
-    border: 0.1rem solid rgba(17, 105, 39, 0.674); /* Borda com cor semi-transparente */
-    background-color: rgb(243, 243, 243); /* Cor de fundo do container */
+.escolha-container  {
+    max-width: 700px;
+    gap: 5px;
+margin: 50px auto;
+padding: 10px;
+background-color: #02000dae;
+border: 1px solid accc;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+ border-radius: 5px;
+display: flex; 
+ flex-direction: column;
+align-items: center;
+justify-content: space-around;
 }
 
 /* Efeito ao passar o mouse sobre o container de escolhas */
@@ -17,7 +24,7 @@
 
 /* Estilo para o prefixo da escolha */
 .escolha-prefixa {
-    padding: 1.5rem 2.0rem; /* Espaçamento interno */
+    padding: 1.0rem 1.5rem; /* Espaçamento interno */
     background-color: #146b2a; /* Cor de fundo do prefixo */
     color: rgb(123, 20, 20); /* Cor do texto */
     
@@ -113,6 +120,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
     margin-bottom: 15px; /* Espaçamento abaixo da imagem */
     padding: 1rem; /* Espaçamento interno da imagem */
+    margin-left: 70px;
 }
 
     
