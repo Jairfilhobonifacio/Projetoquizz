@@ -16,12 +16,16 @@
 
 @font-face: {
   font-family: Scorchedearth;
-  src: url();
+  src: url(../Assets/scorched-earth-font);
   font-weight: normal;
-  font-style: normal;
+  font-style: 500;
 }  
 
-
+.Scorchedearth {
+  font-family: "Scorchedearth", serif;
+  font-weight: 500;
+  font-style: normal;
+}
 
 /* Estilo para Cabeçalhos */
 h1,
