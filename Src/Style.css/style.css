@@ -17,8 +17,8 @@
 @font-face: {
   font-family: Scorchedearth;
   src: url(../Assets/scorched-earth-font);
-  font-weight: normal;
-  font-style: 500;
+  font-weight: 500;
+  font-style: normal;
 }  
 
 .Scorchedearth {
