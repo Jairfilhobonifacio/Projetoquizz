@@ -14,18 +14,15 @@
  
 /* ESTILIZAÇÃO DA Fonte do Título do jogo - h1  */
 
-@font-face: {
-  font-family: Scorchedearth;
-  src: url(../Assets/scorched-earth-font);
-  font-weight: 500;
-  font-style: normal;
+@font-face {
+  font-family: "Scorchedearth";
+  src: url(../Assets/scorched-earth-font/Scorchedearth-4Ljp.otf);
 }  
 
-.Scorchedearth {
+/* .Scorchedearth {
   font-family: "Scorchedearth", serif;
-  font-weight: 500;
-  font-style: normal;
-}
+  font-weight: 900;
+} */
 
 /* Estilo para Cabeçalhos */
 h1,
@@ -35,11 +32,13 @@ h4 {
   margin-bottom: 1rem; /* Margem inferior padrão para cabeçalhos */
 }
 
+
+
 h1 {
     font-size: 5.4rem; /* Tamanho da fonte para h1 */
     color: #17802cba; /* Cor do texto para h1 */
     margin-bottom: 5rem; /* Margem inferior para h1 */
-    font-family: Scorchedearth;
+    font-family: "Scorchedearth", serif;
 }
 
 h1 > span {
