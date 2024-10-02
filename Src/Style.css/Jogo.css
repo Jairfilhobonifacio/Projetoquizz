@@ -17,9 +17,10 @@
 
 /* Estilo para o prefixo da escolha */
 .escolha-prefixa {
-    padding: 1.5rem 2.5rem; /* Espaçamento interno */
+    padding: 1.5rem 2.0rem; /* Espaçamento interno */
     background-color: #146b2a; /* Cor de fundo do prefixo */
     color: rgb(123, 20, 20); /* Cor do texto */
+    
 }
 
 /* Estilo para o texto da escolha */
@@ -35,7 +36,7 @@
 
 /* Estilo para respostas incorretas */
 .incorreto {
-    background-color: rgba(122, 11, 11, 0.847); /* Cor de fundo para resposta incorreta */
+    background-color: rgb(123, 20, 20); /* Cor de fundo para resposta incorreta */
 }
 
 /* HUD (Heads-Up Display) */
@@ -47,7 +48,7 @@
 /* Estilo para o prefixo do HUD */
 .hud-prefixo {
     text-align: center; /* Centraliza o texto */
-    font-size: 2rem; /* Tamanho da fonte */
+    font-size: 2.5rem; /* Tamanho da fonte */
     color: #164b24; /* Cor do texto */
 }
 
@@ -69,7 +70,7 @@
 /* Estilo da parte cheia da barra de progresso */
 #progressoBarraCheia {
     height: 3.4rem; /* Altura da parte cheia */
-    background-color: #4CAF50; /* Cor de fundo da parte cheia */
+    background-color: #0a490c; /* Cor de fundo da parte cheia */
 }
 
 /* Estilo do botão de resposta */
@@ -79,7 +80,7 @@
     left: 50%; /* Centraliza o botão horizontalmente */
     transform: translate(-50%, -50%); /* Ajusta o botão para ficar centralizado */
     background-color: #4CAF50; /* Cor de fundo do botão */
-    color: #e10404; /* Cor do texto do botão */
+    color: rgb(123, 20, 20); /* Cor do texto do botão */
     padding: 10px 20px; /* Espaçamento interno do botão */
     border: none; /* Remove a borda padrão */
     border-radius: 5px; /* Arredonda os cantos do botão */
@@ -158,3 +159,18 @@
     }   
 }
 
+/* ESTILIZAÇÃO DA FONTE DAS QUESTÕES */
+
+.baskervville-sc-regular {
+    font-family: "Baskervville SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Backgroud */
+body {
+    background-image: url(../Assets/fundosala.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }

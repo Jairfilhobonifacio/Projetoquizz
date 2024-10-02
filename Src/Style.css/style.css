@@ -10,21 +10,18 @@
     margin: 0; /* Remove margem padrão */
     padding: 0; /* Remove padding padrão */
     color: #2d2929; /* Cor do texto */
-    .baskervville-sc-regular {
-        font-family: "Baskervville SC", serif;
-        font-weight: 400;
-        font-style: normal;
-      } /*FONTE DAS QUESTÕES */
-      @font-face: {
-        font-family: Scorchedearth;
-        src: url(Src/Assents/misc/Scorchedearth-4Ljp.otf);
-        font-weight: normal;
-        font-style: normal;
-    }  /* Fonte do Título do jogo - h1 */
-      
 }
  
- 
+/* ESTILIZAÇÃO DA Fonte do Título do jogo - h1  */
+
+@font-face: {
+  font-family: Scorchedearth;
+  src: url(Src/Assents/misc/Scorchedearth-4Ljp.otf);
+  font-weight: normal;
+  font-style: normal;
+}  
+
+
 
 /* Estilo para Cabeçalhos */
 h1,
@@ -165,17 +162,8 @@ input::placeholder {
 /* Backgroud */
 body {
   background-image: url(../Assets/Imagem\ de\ fundo\ Inicial.jpeg);
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center-center;
+  background-position: center;
 }
 
-/* TESTE DA FONTE*/
-.container
-  h1 {
-    @font-face: {
-        font-family: fonteTitulo;
-        src: url(Src/Assents/Scorchedearth-4Ljp.otf);
-}
-
-}
