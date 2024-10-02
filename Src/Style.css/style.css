@@ -16,7 +16,7 @@
 
 @font-face: {
   font-family: Scorchedearth;
-  src: url(Src/Assents/misc/Scorchedearth-4Ljp.otf);
+  src: url();
   font-weight: normal;
   font-style: normal;
 }  
@@ -35,7 +35,7 @@ h1 {
     font-size: 5.4rem; /* Tamanho da fonte para h1 */
     color: #17802cba; /* Cor do texto para h1 */
     margin-bottom: 5rem; /* Margem inferior para h1 */
-    font-family: fonteTitulo;
+    font-family: Scorchedearth;
 }
 
 h1 > span {

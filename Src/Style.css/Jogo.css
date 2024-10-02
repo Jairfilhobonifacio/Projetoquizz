@@ -161,6 +161,13 @@
 
 /* ESTILIZAÇÃO DA FONTE DAS QUESTÕES */
 
+@font-face: {
+    font-family: "Baskervville SC";
+    src: url(../Assets/Baskervville_SC/BaskervvilleSC-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+  }  
+
 .baskervville-sc-regular {
     font-family: "Baskervville SC", serif;
     font-weight: 400;
