@@ -14,15 +14,8 @@
  
 /* ESTILIZAÇÃO DA Fonte do Título do jogo - h1  */
 
-@font-face {
-  font-family: "Scorchedearth";
-  src: url(../Assets/scorched-earth-font/Scorchedearth-4Ljp.otf);
-}  
 
-/* .Scorchedearth {
-  font-family: "Scorchedearth", serif;
-  font-weight: 900;
-} */
+
 
 /* Estilo para Cabeçalhos */
 h1,
