@@ -1,57 +1,61 @@
 /* Estilo para o container das escolhas */
-.escolha-container  {
-    display: flex; /* Alinha os elementos filhos em linha */
-    margin-bottom: 0.5rem; /* Espaçamento abaixo do container */
-    width: 30%; /* Ocupa toda a largura disponível */
-    margin: 50px auto;
-    padding: 10px;
-    border: 1px solid #ccc; 
-background-color: #02000d05; 
-
-
+.escolha-container {
+    display: flex;
+    margin-bottom: 1rem;
+    width: 45%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #4CAF50;
+    background-color: rgba(2, 0, 13, 0.8);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    transition: background-color 0.3s ease, border 0.3s ease;
 }
 
 /* Efeito ao passar o mouse sobre o container de escolhas */
 .escolha-container:hover {
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    box-shadow: 0 0.4rem 1.4rem rgba(18, 88, 27, 0.5); /* Sombra ao redor do container */
-    transition: transform 150ms; /* Suaviza a transição do efeito */
-    transform: translateY(-0.1rem); /* Levanta o container ligeiramente ao passar o mouse */
-    border: 1px solid #ccc; 
-background-color: #02000d05; 
- box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
- border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0.6rem 2rem rgba(18, 88, 27, 0.5);
+    transform: translateY(-0.2rem);
+    border: 1px solid #00ff88;
+    background-color: rgba(238, 245, 242, 0.185);
 }
 
 /* Estilo para o prefixo da escolha */
 .escolha-prefixa {
-    padding: 1.0rem 1.5rem; /* Espaçamento interno */
-    background-color: #146b2a; /* Cor de fundo do prefixo */
-    color: rgb(123, 20, 20); /* Cor do texto */
-    
+    padding: 1rem 1.5rem;
+    background-color: #146b2a;
+    color: #ffffff;
+    font-size: 1.2rem;
+    border-radius: 5px;
 }
 
 /* Estilo para o texto da escolha */
 .escolha-texto {
-    padding: 1.5rem; /* Espaçamento interno */
-    width: 100%; /* Ocupa toda a largura do container */
-    color: aliceblue;
+    padding: 1rem;
+    color: #ffffff;
+    font-size: 1.2rem;
+    flex-grow: 1;
 }
 
 /* Estilo para respostas corretas */
 .correto {
     background-color: rgba(0, 247, 0, 0.926); /* Cor de fundo para resposta correta */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5)
 }
 
 /* Estilo para respostas incorretas */
 .incorreto {
     background-color: rgb(123, 20, 20); /* Cor de fundo para resposta incorreta */
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
 
 /* HUD (Heads-Up Display) */
 #hud {
-    display: flex; /* Alinha os elementos do HUD em linha */
-    justify-content: space-between; /* Espaça os elementos igualmente */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
 }
 
 /* Estilo para o prefixo do HUD */
@@ -63,38 +67,43 @@ background-color: #02000d05;
 
 /* Estilo para o texto principal do HUD */
 .hud-texto-principal {
-    text-align: center; /* Centraliza o texto */
-    color: #164b24; /* Cor do texto */
+    text-align: center;
+    font-size: 2rem;
+    color: #00ff88;
 }
 
 /* Estilo da barra de progresso */
 #progressoBarra {
-    width: 20rem; /* Largura da barra de progresso */
-    height: auto; /* Altura automática para manter proporção */
-    border: 0.3rem solid #4CAF50; /* Borda da barra de progresso */
+    width: 100%;
+    height: 2rem;
+    border: 0.3rem solid #4CAF50;
+    border-radius: 5px;
     overflow: hidden;
-    
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Estilo da parte cheia da barra de progresso */
 #progressoBarraCheia {
-    height: 3.4rem; /* Altura da parte cheia */
-    background-color: #0a490c; /* Cor de fundo da parte cheia */
+    width: 0;
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 0.3s ease;
 }
 
 /* Estilo do botão de resposta */
 #botao-resposta {
-    position: absolute; /* Posiciona o botão de forma absoluta */
-    top: 80%; /* Distância do topo da tela */
-    left: 50%; /* Centraliza o botão horizontalmente */
-    transform: translate(-50%, -50%); /* Ajusta o botão para ficar centralizado */
-    background-color: #4CAF50; /* Cor de fundo do botão */
-    color: rgb(123, 20, 20); /* Cor do texto do botão */
-    padding: 10px 20px; /* Espaçamento interno do botão */
-    border: none; /* Remove a borda padrão */
-    border-radius: 5px; /* Arredonda os cantos do botão */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    font-size: 18px; /* Tamanho da fonte do botão */
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+#botao-resposta:hover {
+    background-color: #45a049;
 }
 
 /* Classe para esconder elementos */
@@ -194,15 +203,32 @@ background-color: #02000d05;
     font-style: 400;
   }  
 
-/* Backgroud */
+/* Estilo para o body com tema apocalíptico */
 body {
-    background-image: url(../Assets/Apocalypse\ zumbi.jpg);
-    background-repeat: no-repeat;
+    background-color: #2e2e2e; /* Fundo cinza escuro, lembrando metal e destruição */
+    background-image: url('../Assets/Apocalypse\ zumbi.jpg'); /* Imagem de fundo apocalíptica */
     background-size: cover;
     background-position: center;
+    color: #f4f4f4; /* Cor do texto para contraste com o fundo sombrio */
+    font-family: 'Baskervville SC', serif; /* Fonte de aspecto antigo e sério */
     margin: 0;
     padding: 0;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Estilo do container principal com tema apocalíptico */
+.container {
+    max-width: 1100px;
+    padding: 20px;
+    margin: 20px;
+    background-color: rgba(20, 20, 20, 0.9); /* Fundo quase preto translúcido */
+    border: 2px solid #4e4e4e; /* Bordas cinza metálico */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Sombra mais forte para dar um aspecto de profundidade */
+}
 
 h2 {
     font-family: "Baskervville SC", serif;
