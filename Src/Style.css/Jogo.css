@@ -1,19 +1,20 @@
 /* Estilo para o container das escolhas */
-.escolha-container {
+.escolha-container  {
     display: flex; /* Alinha os elementos filhos em linha */
     margin-bottom: 0.5rem; /* Espaçamento abaixo do container */
     width: 30%; /* Ocupa toda a largura disponível */
-   
     margin: 50px auto;
     padding: 10px;
     border: 1px solid #ccc; 
 background-color: #02000d05; 
+
+
 }
 
 /* Efeito ao passar o mouse sobre o container de escolhas */
 .escolha-container:hover {
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
- 
+    box-shadow: 0 0.4rem 1.4rem rgba(18, 88, 27, 0.5); /* Sombra ao redor do container */
     transition: transform 150ms; /* Suaviza a transição do efeito */
     transform: translateY(-0.1rem); /* Levanta o container ligeiramente ao passar o mouse */
     border: 1px solid #ccc; 
@@ -24,9 +25,10 @@ background-color: #02000d05;
 
 /* Estilo para o prefixo da escolha */
 .escolha-prefixa {
-    padding: 1.5rem 2.5rem; /* Espaçamento interno */
-    background-color: #56eb7b; /* Cor de fundo do prefixo */
-    color: rgb(176, 15, 15); /* Cor do texto */
+    padding: 1.0rem 1.5rem; /* Espaçamento interno */
+    background-color: #146b2a; /* Cor de fundo do prefixo */
+    color: rgb(123, 20, 20); /* Cor do texto */
+    
 }
 
 /* Estilo para o texto da escolha */
@@ -38,12 +40,12 @@ background-color: #02000d05;
 
 /* Estilo para respostas corretas */
 .correto {
-    background-color: green; /* Cor de fundo para resposta correta */
+    background-color: rgba(0, 247, 0, 0.926); /* Cor de fundo para resposta correta */
 }
 
 /* Estilo para respostas incorretas */
 .incorreto {
-    background-color: red; /* Cor de fundo para resposta incorreta */
+    background-color: rgb(123, 20, 20); /* Cor de fundo para resposta incorreta */
 }
 
 /* HUD (Heads-Up Display) */
@@ -55,14 +57,14 @@ background-color: #02000d05;
 /* Estilo para o prefixo do HUD */
 .hud-prefixo {
     text-align: center; /* Centraliza o texto */
-    font-size: 2rem; /* Tamanho da fonte */
-    color: #56eb7b; /* Cor do texto */
+    font-size: 2.5rem; /* Tamanho da fonte */
+    color: #164b24; /* Cor do texto */
 }
 
 /* Estilo para o texto principal do HUD */
 .hud-texto-principal {
     text-align: center; /* Centraliza o texto */
-    color: #ff2600; /* Cor do texto */
+    color: #164b24; /* Cor do texto */
 }
 
 /* Estilo da barra de progresso */
@@ -71,22 +73,23 @@ background-color: #02000d05;
     height: auto; /* Altura automática para manter proporção */
     border: 0.3rem solid #4CAF50; /* Borda da barra de progresso */
     overflow: hidden;
+    
 }
 
 /* Estilo da parte cheia da barra de progresso */
 #progressoBarraCheia {
     height: 3.4rem; /* Altura da parte cheia */
-    background-color: #4CAF50; /* Cor de fundo da parte cheia */
+    background-color: #0a490c; /* Cor de fundo da parte cheia */
 }
 
 /* Estilo do botão de resposta */
 #botao-resposta {
-    position: relative; /* Posiciona o botão de forma absoluta */
+    position: absolute; /* Posiciona o botão de forma absoluta */
     top: 80%; /* Distância do topo da tela */
     left: 50%; /* Centraliza o botão horizontalmente */
     transform: translate(-50%, -50%); /* Ajusta o botão para ficar centralizado */
     background-color: #4CAF50; /* Cor de fundo do botão */
-    color: #f70f0f; /* Cor do texto do botão */
+    color: rgb(123, 20, 20); /* Cor do texto do botão */
     padding: 10px 20px; /* Espaçamento interno do botão */
     border: none; /* Remove a borda padrão */
     border-radius: 5px; /* Arredonda os cantos do botão */
@@ -108,7 +111,7 @@ background-color: #02000d05;
 #explicacao-cenario {
     margin-bottom: 20px;
     padding: 20px;
-    
+    color: #ccc;
     transition: opacity 0.5s; /* Suaviza a transição de opacidade */
 }
 
@@ -159,10 +162,7 @@ background-color: #02000d05;
         min-height: 2rem;
     }   
     
-    #questao {
-       text-align: center; 
-       
-    }
+    
 
 }
 
@@ -178,18 +178,32 @@ background-color: #02000d05;
     }   
 }
 
+/* ESTILIZAÇÃO DA FONTE DAS QUESTÕES */
 
+@font-face {
+    font-family: "Baskervville SC";
+    src: url(../Assets/Baskervville_SC/BaskervvilleSC-Regular.ttf);
+    font-weight: normal;
+    font-style: 400;
+  }  
+
+/* Backgroud */
 body {
+    background-image: url(../Assets/Apocalypse\ zumbi.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     margin: 0;
     padding: 0;
-    background-image: url("/Src/Assets/Apocalypse\ zumbi.jpg"); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: 'Courier New', Courier, monospace;
-}
+  }
+
 h2 {
-    margin: 50px auto;
-    padding: 10px;
-    border: 1px solid #ccc; 
+    font-family: "Baskervville SC", serif;
+    color: #ccc;
+    text-align: center;
+}
+
+p {
+    font-family: "Baskervville SC", serif;
+    font-weight: 900;
 }

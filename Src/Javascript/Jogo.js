@@ -113,7 +113,7 @@ window.addEventListener("load", () => {
 const obterNovaPergunta = () => {
     if (questoesDisponiveis.length === 0 || contadorDePerguntas >= MAXIMO_QUESTOES) {
         const { pontos, tipo } = calcularTipoSobrevivente(); // Calcula a pontuação e tipo de sobrevivente
-        return window.location.assign(`resultado.html?pontos=${pontos}&tipo=${tipo}&erros=${erros}`); // Redireciona para a página final com parâmetros
+        return window.location.assign(`Final.html?pontos=${pontos}&tipo=${tipo}&erros=${erros}`); // Redireciona para a página final com parâmetros
     }
 
     contadorDePerguntas++; // Incrementa o contador de perguntas
@@ -185,7 +185,7 @@ escolhas.forEach(escolha => {
             erros++; // Incrementa o número de erros
             if (erros >= MAXIMO_ERROS) {
                 const { pontos, tipo } = calcularTipoSobrevivente();
-                return window.location.assign(`resultado.html?pontos=${pontos}&tipo=${tipo}&erros=${erros}`);
+                return window.location.assign(`Final.html?pontos=${pontos}&tipo=${tipo}&erros=${erros}`);
             }   
            
             decrementarPontos(5); // Penaliza com a perda de pontos

@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--FONTES DAS QUESTÕES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet"> <!--FIM DA FONTE DAS QUESTÕES-->
     <title>Quiz Apocaliptico - Jogar</title>
-    <link rel="stylesheet" href="/Src/Style.css/Jogo.css"> <!-- Link para o arquivo de estilo CSS -->
+    <link rel="stylesheet" href="../Src/Style.css/Jogo.css"> 
+    <!-- Link para o arquivo de estilo CSS -->
 </head>
 <body>
     <!-- Container Principal -->
@@ -15,7 +20,7 @@
             <div id="hud">
                 <!-- Progresso da Questão -->
                 <div id="hud-item">
-                    <p id="progressoText" class="hud-prefixo">Questão</p>
+                    <p id="progressoText" class="hud-prefixo" src="Baskervville SC">Questão</p>
                     <div id="progressoBarra">
                         <div id="progressoBarraCheia"></div> <!-- Parte cheia da barra de progresso -->
                     </div>
@@ -41,27 +46,27 @@
             <h2 id="questao">Qual resposta temos para essas questões</h2>
 
             <!-- Container de Opções de Resposta -->
-            <div class="escolha-container">
+            <div class="escolha-container baskervville-sc-regular">
                 <audio id="som-acerto" src="/Src/Assets/power-punch-192118.mp3"></audio>
                 <audio id="som-erro" src="/Src/Assets/error-sound-39539.mp3"></audio>
                 <p class="escolha-prefixa">A</p>
                 <p class="escolha-texto" data-number="1">Opção 1</p> <!-- Opção de resposta 1 -->
             </div>
-            <div class="escolha-container">
+            <div class="escolha-container baskervville-sc-regular">
                 <p class="escolha-prefixa">B</p>
                 <p class="escolha-texto" data-number="2">Opção 2</p> <!-- Opção de resposta 2 -->
             </div>
-            <div class="escolha-container">
+            <div class="escolha-container baskervville-sc-regular">
                 <p class="escolha-prefixa">C</p>
                 <p class="escolha-texto" data-number="3">Opção 3</p> <!-- Opção de resposta 3 -->
             </div>
-            <div class="escolha-container">
+            <div class="escolha-container baskervville-sc-regular">
                 <p class="escolha-prefixa">D</p>
                 <p class="escolha-texto" data-number="4">Opção 4</p> <!-- Opção de resposta 4 -->
             </div>
         </div>
     </div>
 
-    <script src="/Src/Javascript/Jogo.js"></script> <!-- Link para o arquivo de script JavaScript -->
+    <script src="../Src/Javascript/Jogo.js"></script> <!-- Link para o arquivo de script JavaScript -->
 </body>
 </html>
