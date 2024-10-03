@@ -162,8 +162,15 @@ background-color: #02000d05;
         min-height: 2rem;
     }   
     
-    
+   p {
+    overflow: hidden;
+    text-align: justify;
+   }     
 
+   .escolha-container {
+    width: 100%;
+    max-width: 80%;
+   }
 }
 
 @media screen and (max-width: 320px) {
