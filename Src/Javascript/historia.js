@@ -7,6 +7,7 @@ const storyText = [
     "Pessoas correndo, gritos ecoando nas ruas, enquanto zumbis vagam sem propósito, seus rostos desfigurados pela loucura.",
     "O que você fará agora?",
     "A segurança da sua família e a sua sobrevivência estão em jogo.",
+    "                                           ",
     "A luta pela vida começa agora!"
 ];
 
@@ -33,8 +34,8 @@ function typeText() {
                 setTimeout(() => {
                     storyElement.style.opacity = '0'; // Torna o texto invisível
                     currentText++;
-                    setTimeout(typeText, 850); // Chama a próxima linha de texto após um delay
-                }, 850); // Tempo para manter o texto visível
+                    setTimeout(typeText, 750); // Chama a próxima linha de texto após um delay
+                }, 750); // Tempo para manter o texto visível
             }
         }
 

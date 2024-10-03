@@ -30,12 +30,29 @@ h4 {
 
 
 
-h1 {
-    font-size: 5.4rem; /* Tamanho da fonte para h1 */
-    color: #17802cba; /* Cor do texto para h1 */
-    margin-bottom: 5rem; /* Margem inferior para h1 */
-    font-family: "Scorchedearth", serif;
+/* Estilo do Título - Quiz */
+.Scorchedearth {
+  font-size: 5.4rem; /* Tamanho da fonte para h1 */
+  color: #66ff66; /* Cor do texto em verde neon */
+  margin-bottom: 5rem; /* Margem inferior para h1 */
+  font-family: "Scorchedearth", serif; /* Fonte apocalíptica */
+  text-shadow: 3px 3px 10px #003300, 0 0 25px #66ff66; /* Sombra e brilho mais intensos */
+  letter-spacing: 0.3rem; /* Espaçamento entre as letras para mais impacto */
+  text-transform: uppercase; /* Deixa o texto em maiúsculas */
+  transition: 200ms ease-in-out; /* Transição suave para os efeitos */
+  background: rgba(0, 0, 0, 0.6); /* Fundo semitransparente para maior contraste */
+  padding: 1rem 2rem; /* Padding interno para dar espaço ao fundo */
+  border-radius: 0.5rem; /* Bordas arredondadas para o fundo */
+  border: 0.2rem solid #17802c; /* Borda verde escura para destacar mais o título */
 }
+
+/* Efeito de hover para o h1 */
+.Scorchedearth:hover {
+  color: #baffc9; /* Texto em um verde mais claro ao passar o mouse */
+  text-shadow: 3px 3px 15px #00ff00, 0 0 30px #66ff66; /* Brilho mais intenso no hover */
+  transform: scale(1.08); /* Ampliação maior no hover */
+}
+
 
 h1 > span {
   font-size: 2.4rem; /* Tamanho do texto dentro do span em h1 */
@@ -86,6 +103,40 @@ h3 {
 .hidden {
   display: none; /* Esconde o elemento */
 }
+
+
+/* Estilo dos Botões - Tela inicial */
+.btn_inicio {
+  font-size: 1.8rem; /* Tamanho da fonte para botões */
+  padding: 1rem 0; /* Padding interno do botão */
+  width: 20rem; /* Largura do botão */
+  text-align: center; /* Centraliza o texto no botão */
+  border: 0.1rem solid #004d00; /* Borda em verde escuro */
+  margin-bottom: 1rem; /* Margem inferior do botão */
+  text-decoration: none; /* Remove sublinhado de links */
+  color: #66ff66; /* Cor do texto verde radioativo */
+  background: #1a3300; /* Fundo verde muito escuro como vegetação densa */
+  box-shadow: inset 0 0 5px #000, 0 0 15px #66ff66; /* Sombra interna e um brilho fraco em verde radioativo */
+  transition: 150ms ease-in-out; /* Transição suave para efeitos */
+  letter-spacing: 0.1rem; 
+}
+
+/* Efeito de hover para o botão */
+.btn_inicio:hover {
+  background: #006600; /* Fundo verde escuro, como uma floresta perigosa */
+  color: #ccffcc; /* Texto verde claro para contraste no hover */
+  transform: scale(1.05); /* Efeito de "levitação" no hover */
+  box-shadow: inset 0 0 10px #000, 0 0 20px #00ff00; /* Aumenta o brilho com um verde mais intenso */
+}
+
+/* Efeito ativo (quando o botão é clicado) */
+.btn_inicio:active {
+  transform: scale(0.98); /* Diminui um pouco o botão ao clicar */
+  background: #003300; /* Fundo verde escuro ao clicar */
+  box-shadow: inset 0 0 8px #000, 0 0 5px #66ff66; /* Reduz o brilho com um verde levemente radioativo */
+}
+
+
 
 /* Estilo dos Botões */
 .btn {
