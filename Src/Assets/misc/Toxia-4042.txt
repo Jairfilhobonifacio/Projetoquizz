@@ -1,0 +1,4 @@
+border: 1px solid #ccc; deixar aquelas bordas brancas
+background-color: #02000dae; adiciona aquele fundo transparente
+ box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+ border-radius: 5px;

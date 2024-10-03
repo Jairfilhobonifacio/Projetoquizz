@@ -9,7 +9,7 @@ const somErro = document.getElementById("som-erro");
 const botaoResposta = document.getElementById("botao-resposta");
 const explicacaoCenario = document.getElementById("explicacao-cenario");
 const imagemPergunta = document.getElementById("imagem-pergunta");
-
+const musicaDeFundoInicio = document.getElementById("musica-de-fundo-inicio");
 // Variáveis de estado do jogo
 let questaoAtual = {};
 let aceitandoPerguntas = false;
@@ -94,7 +94,20 @@ const iniciarJogo = () => {
     erros = 0; // Reseta os erros
     questoesDisponiveis =  [...questoes]; // Cópia das questões disponíveis
     obterNovaPergunta(); // Obtém a primeira pergunta
+    musicaDeFundoInicio.pause();
+   musicaDeFundoInicio.currentTime = 0;
 };
+
+const iniciarMusicaDeFundo = () => {
+       musicaDeFundoInicio.play();
+    };
+
+
+
+// Inicia a música de fundo da tela de início do jogo quando a página é carregada
+window.addEventListener("load", () => {
+    musicaDeFundoInicio.play();
+});
 
 // Função para obter uma nova pergunta
 const obterNovaPergunta = () => {
@@ -104,7 +117,7 @@ const obterNovaPergunta = () => {
     }
 
     contadorDePerguntas++; // Incrementa o contador de perguntas
-    progressoText.innerText = `Questão ${contadorDePerguntas} / ${MAXIMO_QUESTOES}`; // Atualiza o texto do progresso
+    progressoText.innerText = `questao ${contadorDePerguntas} / ${MAXIMO_QUESTOES}`; // Atualiza o texto do progresso
     progressoBarraCheia.style.width = `${(contadorDePerguntas / MAXIMO_QUESTOES) * 100}%`; // Carregar a barra de progresso
     
     questaoAtual = questoesDisponiveis.shift(); // Obtém a próxima pergunta

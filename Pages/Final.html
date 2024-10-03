@@ -8,22 +8,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="carregarResultado()">
     <div class="container">
         <div id="Final" class="flex-center flex-column">
-            <h1 id="mensagemfinal" class="glitch">Parabéns, você sobreviveu!</h1>
-            <h2 id="pontuaçãofinal" class="score">Pontuação: 0</h2>
-            <form class="formulario">
-                <input type="text" name="username" id="username" placeholder="Insira seu nome" class="input-text" />   
-                <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)">
-                    Salvar Pontuação
+
+            <div id="resultado-container">
+                <h1>Parabéns voce sobreviveu </h1>
+                <h2 id="sobre">tipo de sobrevivente : </h2>
+                <img id="imagem-sobrevivente"  alt="Imagem do tipo de sobrevivente">
+            </div>
+           
                 </button>
             </form> 
             <a class="btn" href="/Pages/jogo.html">Jogar de Novo</a>
             <a class="btn" href="/">Ir para o Início</a>
+
+
+            
+                
+            </div>
         </div>
     </div>
     <div class="background-overlay"></div>
-    <script src="Final.js"></script>
+    <script src="../Src/Javascript/Jogo.js"></script>
 </body>
 </html>

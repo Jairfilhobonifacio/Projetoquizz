@@ -91,10 +91,12 @@ h2 {
     margin-bottom: 20px;
 }
 
-.score {
-    font-size: 1.8rem;
-    color: #fff;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+.sobre {
+    font-weight: 700;
+    color: aqua;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
 }
 
 /* MEDIA QUERIES PARA RESPONSIVIDADE */
