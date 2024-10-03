@@ -203,6 +203,23 @@ escolhas.forEach(escolha => {
 const calcularTipoSobrevivente = () => {
     const acertos = pontos / CORRETO_BONUS; // Número de acertos
     let tipo = "";
+    const calcularTipoSobrevivente = () => {
+        let tipo;
+        let imagemTipoSobrevivente;
+        
+        if (pontos >= 50 && erros <= 1) {
+            tipo = "Sobrevivente Lendário";
+            imagemTipoSobrevivente = "../Src/Assets/sobrevivente-lendario.jpg"; // Caminho da imagem para o sobrevivente lendário
+        } else if (pontos >= 30 && pontos < 50 && erros <= 2) {
+            tipo = "Sobrevivente Experiente";
+            imagemTipoSobrevivente = "../Src/Assets/sobrevivente-experiente.jpg"; // Caminho da imagem para o sobrevivente experiente
+        } else {
+            tipo = "Sobrevivente Iniciante";
+            imagemTipoSobrevivente = "../Src/Assets/sobrevivente-iniciante.jpg"; // Caminho da imagem para o sobrevivente iniciante
+        }
+        
+        return { pontos, tipo, imagemTipoSobrevivente };
+    };
 
     // Atribuição lógica dos tipos de sobrevivente
     if (acertos >= 5) {
